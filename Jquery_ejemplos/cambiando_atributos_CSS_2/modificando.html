@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		
+		#primer_parrafo{
+			background-color: #F00;
+		}
+
+	</style>
+	<script src="../Jquery/jquery-3.3.1.js"></script>
+	<script>
+		
+		$(document).ready(function(){
+
+			//var colorFondo=$("#primer_parrafo").css("background-color"); //GUARDA EL COLOR O CAPTURA UNA PROPIEDAD CSS
+
+			//$("#primer_parrafo").css("background-color","#00F"); //EL SEGUNDO PARAMETRO, ES CON EL QUE SE CAMBIA LA PROPIEDAD
+
+			$("p.destacado").css("border","2px dotted blue"); // COMO CONSTRUIR CSS
+
+		});
+
+	</script>
+</head>
+<body>
+	
+	<p id="primer_parrafo">Primer párrafo</p>
+	<p class="destacado">Párrafo destacado</p>
+	<p>Tercer párrafo </p>
+</body>
+</html>

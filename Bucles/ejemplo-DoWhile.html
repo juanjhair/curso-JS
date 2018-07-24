@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<label for="textfield"></label>
+				<input type="text" name="textfield" id="c_mensaje">
+			</td>
+			<td>
+				<label for="textfield2"></label>
+				<input type="text" name="textfield2" id="c_intentos">
+			</td>
+		</tr>
+	</table>
+
+	<script>
+	
+	var aleatorio=Math.round(Math.random()*100);
+	var minum,intentos;
+	minum=0;
+	intentos=0;
+	var mensaje=document.getElementById("c_mensaje");
+	var intentosConsumidos=document.getElementById("c_intentos");
+
+		document.write(aleatorio);
+	do{
+		minum=prompt("Introduce un n° entre 0 y 100","");
+		
+		if(!isNaN(minum)){
+			if(aleatorio>minum){
+				mensaje.value="Mas alto";
+				
+			}
+			else if(aleatorio<minum){
+				mensaje.value="Mas bajo";
+
+			}
+			mensaje.style.fontSize="18px";
+			intentosConsumidos.style.fontSize="18px";
+			intentosConsumidos.style.color="red";
+			intentosConsumidos.style.textAlign="center";
+
+			intentos++;
+
+			intentosConsumidos.value=intentos;
+		}else{
+			mensaje.value="Numero no valido";
+		}
+		
+
+	}while(aleatorio!=minum);
+
+	mensaje.value="Correcto!";
+	mensaje.style.color="red";
+
+
+</script>
+	
+</body>
+</html>

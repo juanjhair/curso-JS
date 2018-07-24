@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../Jquery/jquery-3.3.1.js"></script>
+<script>
+	/*
+	var propVent="width=300, height=200 left=300 , top=300, scrollbars=no, toolbars=no";
+		open("http://www.pildorasinformaticas.es","Pildoras",propVent);
+	//1ero : direccion que abrirá
+	//2do: nombre identificativo a nivel interno , opcional
+	//3er: tamaño y propiedades de la ventana
+	*/
+	
+
+	$(document).ready(function(){
+		
+		var propVent="width=300, height=200 left=300 , top=300, scrollbars=no, toolbars=no";
+		var miVentana=open("maps.html","Pildoras",propVent); //ALMACENAR UNA VENTANA EMERGENTE
+		$("#botonCerrar").click(function(e){
+			
+			e.preventDefault; // el evento por default es actuaizar la pagina por el href="" con lo cual va actualizarce la pagina y hacer que se abra otra ventena
+
+			miVentana.close(); // cerrar ventana emergente
+		});
+
+	});
+
+
+
+	
+
+</script>
+</head>
+
+<body>
+<a href="http://www.pildorasinformaticas.es">Ir a Píldoras</a>
+<br><br><br>
+<a href="" id="botonCerrar">Cerrar</a>
+</body>
+</html>

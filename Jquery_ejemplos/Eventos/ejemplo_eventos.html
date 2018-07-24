@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Introducción a eventos</title>
+<style>
+h1{
+	text-align:center;
+}
+body{
+	background-color:#334873;
+	color:#FFF;
+}
+
+#principal{
+	width:60%;
+	margin:auto;
+}
+
+a{
+	color:#FFF;
+	font:bold 20px Verdana, Geneva, sans-serif;
+} 
+</style>
+<script src="../Jquery/jquery-3.3.1.js"></script>
+<script>
+
+	$(document).ready(function(){
+		/*//APUNTAMOS A TODA LA PAGINA
+		$("html") .dblclick(function(){
+			alert("AYYYYYYY");
+		});*/
+
+		$("a").mouseover(function(){
+			var mensaje="<p> Estás pasando el raton por encima del link </p>";
+
+			$("#principal").append(mensaje);
+		});
+		$("#el_boton").click(function(){
+
+			$(this).val("Para de hacer click"); // MODIFICA EL TEXTO DEL BOTON APUNTADO
+		});
+
+		$("#el_campo").focus(function(){
+
+			$(this).val("Ahora vas a escribir aqui");
+		});
+		$("#link1").click(function(){
+
+			$(this).attr("href","prueba.html");
+		});
+
+	});
+</script>
+</head>
+<body>
+
+<div id="principal">
+
+<h1>Introducción a eventos</h1>
+
+<p><a href="#" id="link1">Un link</a></p>
+
+<form action="#" method="get" >
+<fieldset><legend>Formulario</legend><p>
+  <input name="button" type="button" id="el_boton" value="Un boton">
+</p>
+<p><input name="textfield" type="text" id="el_campo"></p></fieldset>
+</form>
+
+</div>
+
+
+</body>
+</html>

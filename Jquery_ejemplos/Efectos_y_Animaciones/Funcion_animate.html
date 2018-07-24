@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+
+</style>
+<script src="../Jquery/jquery-3.3.1.js"></script>
+<script>
+
+$(document).ready(function() {
+
+	$("#imagen").click(function(){
+		$(this).animate(
+		{
+			marginLeft:"+=300px"   // POR CADA CLICK , QUE SE AUMENTE 50 PX HACIA LA IZQUIERDA QUE DARA EFECTO DE MOVIMIENTO
+		},1000);
+	})
+
+});
+
+
+</script>
+</head>
+
+<body>
+<img src="../imgs/carro.png" width="300" height="200" id="imagen">
+
+</body>
+</html>

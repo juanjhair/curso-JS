@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		
+		#banner{
+			background-color: #F00;
+			width: 450px;
+			height: 300px;
+			position: absolute;
+			left: 400px;
+			top: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+		img{
+			float: left;
+			margin: 15px;
+			width: 200px;
+			height: 150px;
+		}	
+		#imagen1,#imagen2,#imagen3,#imagen4{
+			float:left;
+			margin:15px;
+			width: 350px;
+			height: 200px;
+			font-size: 36px;
+		}
+
+	</style>
+	<script src="../Jquery/jquery-3.3.1.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			/*
+			var z=document.getElementById("cerrar");
+			z.addEventListener("click",cerrar_banner,false);*/
+			document.getElementById("cerrar").addEventListener("click",cerrar_banner,false);
+
+			//document.getElementById("imagen1").addEventListener("click",carrito,false);
+
+			var imagenes=document.querySelectorAll("#carrete img");
+
+			for (var i =0; i<imagenes.length;i++) {
+
+				imagenes[i].addEventListener("click",carrito,false);
+			}
+
+			//SELECCIONA LOS ELEMENTOS EN BASE A SU ETIQUETA
+
+		});
+	
+
+	function cerrar_banner(){
+
+		$("#banner").remove(); //ELIMINAR CONTENEDOR
+
+	}
+	function carrito(num){
+
+		
+
+		if(num.target==imagen1){// QUE ME DIGA QUIEN ES EL ORIGEN DEL EVENTO, O QUE OBJETO HA DESENCADENADO EL EVENTO ( imagen1 , imagen2 etc)
+			$("#imagen1").replaceWith("<div id='imagen1'>Agregado al carro</div>"); //REEMPLAZA CONTENEDOR
+		}
+		if(num.target==imagen2){// QUE ME DIGA QUIEN ES EL ORIGEN DEL EVENTO, O QUE OBJETO HA DESENCADENADO EL EVENTO ( imagen1 , imagen2 etc)
+			$("#imagen2").replaceWith("<div id='imagen2'>Agregado al carro</div>"); //REEMPLAZA CONTENEDOR
+		}
+		if(num.target==imagen3){// QUE ME DIGA QUIEN ES EL ORIGEN DEL EVENTO, O QUE OBJETO HA DESENCADENADO EL EVENTO ( imagen1 , imagen2 etc)
+			$("#imagen3").replaceWith("<div id='imagen3'>Agregado al carro</div>"); //REEMPLAZA CONTENEDOR
+
+		} 
+		if(num.target==imagen4){// QUE ME DIGA QUIEN ES EL ORIGEN DEL EVENTO, O QUE OBJETO HA DESENCADENADO EL EVENTO ( imagen1 , imagen2 etc)
+			$("#imagen4").replaceWith("<div id='imagen4'>Agregado al carro</div>"); //REEMPLAZA CONTENEDOR
+		}  
+
+	}
+
+
+	</script>
+
+</head>
+<body>
+	<div id="banner">
+		Banner de prueba
+		<p id="cerrar">Cerrar</p>
+	</div>
+	<div id="carrete">
+		<img src="../imgs/js.jpg" id="imagen1" >
+		<img src="../imgs/js1.jpg" id="imagen2">
+		<img src="../imgs/js2.jpg" id="imagen3">
+		<img src="../imgs/js3.jpg" id="imagen4">
+	</div>
+</body>
+</html>

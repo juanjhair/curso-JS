@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../Jquery/jquery-3.3.1.js"></script>
+
+	<script>
+		
+		$(document).ready(function(){
+			$("#carrete img").hide(); //SE LE LLAMA UN LOOP AUTOMATICO, APLICA LA FUNCION HIDE A TODOS LOS ELEMENTOS DE ESAS CARACTERISTICAS
+		});
+
+	</script>
+
+	
+
+</head>
+<body>
+	<div id="carrete">
+		<img src="../imgs/js.jpg" width="250" height="175">
+		&nbsp;
+		<img src="../imgs/js1.jpg" width="250" height="175">
+		&nbsp;
+		<img src="../imgs/js2.jpg" width="250" height="175">
+		&nbsp;
+		<img src="../imgs/js3.jpg" width="250" height="175">
+		&nbsp;
+
+	</div>
+	
+	<!--OCULTAR IMAGENES SIN JQUERY
+	<script>
+		//ALMACENAR TODAS LAS IMAGENES EN ESTA VARIABLE
+		var imagenes=document.querySelectorAll("#carrete img"); // seleccioname todas las etiquetas qeu tengan lo del parentesis 
+
+		for(var i=0;i<imagenes.length;i++){
+
+			imagenes[i].style.visibility="hidden";
+
+		}
+	</script>
+	-->
+</body>
+</html>

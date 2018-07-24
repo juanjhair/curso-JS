@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		
+		#anuncio{
+			background-color: #000;
+			color: #FFF;
+			font-size: 24px;
+		}
+	</style>
+	<script src="../Jquery/jquery-3.3.1.js"></script>
+
+	<script>
+		
+		$(document).ready(function(){
+			$("#anuncio").width(500)
+			.height(500)
+			.text("¡Vende!")
+			.hide()
+			.fadeIn(10000); //SE PASA TAMAÑAN EN PIXELES POR PARAMETRO , Hide = oculatar , fadeIn = nos lo muestra en 10 seg o 10000 milisegundos 
+		});
+
+	</script>
+
+</head>
+<body>
+	<div id="anuncio">
+		¡COMPRA!
+	</div>
+	
+	<!--
+	<script>
+		
+		var anuncio=document.getElementById("anuncio"); // ALMACENA UN UNICO ELEMENTO
+
+		anuncio.style.width="500px";
+		anuncio.style.height="500px";
+		anuncio.innerHTML="¡Vende!";
+
+	</script>
+	-->
+</body>
+</html>

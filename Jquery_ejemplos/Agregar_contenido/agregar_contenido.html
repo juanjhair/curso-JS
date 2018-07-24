@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../Jquery/jquery-3.3.1.js"></script>
+
+	<style>
+		
+		.micontenedor{
+			background-color: #0F0;
+		}
+	</style>
+	<script>
+		/*
+		$(document).ready(function(){
+
+			FUNCIONES
+			
+			alert($("#errores h2").html()); // ESTA FUNCION HTML() SIRVE PARA MOSTRARNOS LOS H2
+
+			$("#errores").html("<p> Hay errores en el formulario </p>"); //MODIFICA TEXTO
+			
+			$("#errores").append("<p> Hay errores en el formulario </p>"); //AGREGA TEXTO DESPUES DEL TEXTO QUE ESTA EN EL CONTENEDOR H2
+			
+			$("#errores").prepend("<p> Hay errores en el formulario </p>"); //AGREGA TEXTO ANTES DEL TEXTO QUE ESTA EN EL CONTENEDOR H2
+
+			 $("#errores").before("<p> Hay errores en el formulario </p>"); //AGREGA TEXTO AFUERA Y ANTES DEL CONTENEDOR h2
+
+			$("#errores").after("<p> Hay errores en el formulario </p>"); //AGREGA TEXTO AFUERA Y ANTES DEL CONTENEDOR h2
+
+			$("#errores h2").text("Hay errores en el formulario") // SUSTITUYE UN TEXTO POR OTRO , NO MODIFICA ETIQUETAS HTML
+
+		});*/
+
+		function validar(){
+			var n_usuario=document.getElementById("usuario").value;
+				if(n_usuario==""){
+					$("#usuario").after(" Rellena este campo, por favor");
+				}
+		}
+
+	</script>
+
+
+</head>
+<body>
+	<!--
+	<div id="contenedor">
+		<div id="errores" class="micontenedor">
+			<h2>Errores</h2>
+		</div>
+	</div>
+	-->
+	<form action="" method="get">
+		<input type="text" name="" id="usuario"><br/>
+		<input type="text" name="" id="nombre"><br/>
+		<input type="text" name="" id="apellido"><br/>
+		<input type="button" value="DALE" onclick="validar()">
+	</form>
+</body>
+</html>
